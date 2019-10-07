@@ -27,12 +27,14 @@ public class Creature : MonoBehaviour {
             }
         }
     }
-
+    public AudioSource powerupAudio;
+    public AudioSource jointsAudio;
     public void HandleUpdateInstalled () {
         CreateConnections ();
         GetComponent<Health> ().currentAmount = GetComponent<Health> ().totalAmount;
         powerPercent = 1f;
         partsPercent = 0f;
+        powerupAudio.Play ();
     }
 
     void Update () {
@@ -52,6 +54,9 @@ public class Creature : MonoBehaviour {
     }
 
     public void SetActionGroupActive (int index, bool active) {
+        if (index == 0 && jointsAudio != null) {
+            jointsAudio.enabled = active;
+        }
         if (actionGroups.Count > index) {
             actionGroups[index].SetActive (active);
         }

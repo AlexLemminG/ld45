@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925332ea01f47d54b9804a871d004f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  group: 0
+  m_actionGroup: 0
   motorSpeed: 720
   motorForce: 100
   autoDirection: 1
@@ -89,7 +89,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}

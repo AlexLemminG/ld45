@@ -7,13 +7,18 @@ public class Motor : MonoBehaviour, IPowerConsusumer {
     public float powerPercentPerSecond = 0.01f;
     public ParticleSystem particles;
 
+    public AudioSource audioSource;
     float consumption;
     Vector3 lookDirImmediate;
     float particlesRate;
-
+    float audioVolume;
     void Awake () {
         particlesRate = particles.emission.rateOverTimeMultiplier;
         lookDir = Vector3.up;
+        if (audioSource != null) {
+            audioVolume = audioSource.volume;
+            audioSource.enabled = true;
+        }
     }
 
     public void SetMovementDir (Transform parent, float forwardPower, float rotationPower) {
@@ -39,6 +44,10 @@ public class Motor : MonoBehaviour, IPowerConsusumer {
         particles.transform.localRotation = Quaternion.LookRotation (-lookDir);
         var emissionRate = particles.emission;
         emissionRate.rateOverTimeMultiplier = Mathf.Clamp01 (consumption / powerPercentPerSecond) * particlesRate;
+
+        if (audioSource != null) {
+            audioSource.volume = consumption / powerPercentPerSecond * audioVolume;
+        }
         // particles.emissionRate = emissionRate;
     }
 

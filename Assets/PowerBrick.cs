@@ -9,6 +9,10 @@ public class PowerBrick : MonoBehaviour {
         if (creature != null && this.enabled && !collider.GetComponentInParent<PowerUpMagnet> ()) {
             this.enabled = false;
             creature.powerPercent += powerPercentPerBrick;
+            var audio = creature.GetComponentInChildren<AudioSource> ();
+            if (audio != null) {
+                audio.Play ();
+            }
             Destroy (gameObject);
         }
     }

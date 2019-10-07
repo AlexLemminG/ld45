@@ -10,6 +10,10 @@ public class PartsBrick : MonoBehaviour {
             this.enabled = false;
             creature.partsPercent += partsPercentPerBrick;
             creature.HandlePartsCountChanged ();
+            var audio = creature.GetComponentInChildren<AudioSource> ();
+            if (audio != null) {
+                audio.Play ();
+            }
             Destroy (gameObject);
         }
     }
