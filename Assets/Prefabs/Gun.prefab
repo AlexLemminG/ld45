@@ -46,6 +46,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5277646574283831220, guid: f10d90fa99beb084a8d2467b3f39a363,
     type: 3}
   m_actionGroup: 1
+  powerPerShot: 0.02
 --- !u!1001 &8218843668696979638
 PrefabInstance:
   m_ObjectHideFlags: 0

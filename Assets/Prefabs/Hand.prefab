@@ -161,6 +161,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.6698113
       objectReference: {fileID: 0}
+    - target: {fileID: 6875597682576714685, guid: e8aa078aa182ac64ca20857073ed196f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1639686392212108074, guid: e8aa078aa182ac64ca20857073ed196f,
         type: 3}
       propertyPath: type
@@ -174,7 +179,7 @@ PrefabInstance:
     - target: {fileID: 1639686392212108074, guid: e8aa078aa182ac64ca20857073ed196f,
         type: 3}
       propertyPath: motorForce
-      value: 200
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 7304013996462004327, guid: e8aa078aa182ac64ca20857073ed196f,
         type: 3}

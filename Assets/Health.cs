@@ -13,11 +13,12 @@ public class Health : MonoBehaviour {
         if (collision.gameObject.GetComponent<Bullet> () != null) {
             return;
         }
+        var thisMass = GetComponent<Rigidbody2D> ().mass;
         float totalImpulse = 0;
         foreach (var c in collision.contacts) {
             totalImpulse += c.normalImpulse;
         }
-        var damage = Mathf.FloorToInt (totalImpulse * 0.2f);
+        var damage = Mathf.FloorToInt (totalImpulse * 1f / thisMass);
         if (damage > 0) {
             DoDamage (damage, collision.contacts[0].point);
         }

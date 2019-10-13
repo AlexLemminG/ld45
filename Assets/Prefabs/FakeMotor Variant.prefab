@@ -10,12 +10,7 @@ PrefabInstance:
     - target: {fileID: 475827620452454408, guid: 9151137aa02a8da46a245284fe0f8e36,
         type: 3}
       propertyPath: m_Name
-      value: FakeMotor
-      objectReference: {fileID: 0}
-    - target: {fileID: 571480267276005061, guid: 9151137aa02a8da46a245284fe0f8e36,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.5
+      value: FakeMotor Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2586929636842149547, guid: 9151137aa02a8da46a245284fe0f8e36,
         type: 3}
@@ -72,11 +67,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -179.99998
       objectReference: {fileID: 0}
-    - target: {fileID: 4173475896756961639, guid: 9151137aa02a8da46a245284fe0f8e36,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5333355770984317377, guid: 9151137aa02a8da46a245284fe0f8e36,
         type: 3}
       propertyPath: m_Enabled
@@ -85,7 +75,22 @@ PrefabInstance:
     - target: {fileID: -7018057397768861135, guid: 9151137aa02a8da46a245284fe0f8e36,
         type: 3}
       propertyPath: force
-      value: 15
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099958670529051075, guid: 9151137aa02a8da46a245284fe0f8e36,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.519
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173475896756961639, guid: 9151137aa02a8da46a245284fe0f8e36,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 571480267276005061, guid: 9151137aa02a8da46a245284fe0f8e36,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8544303270129853289, guid: 9151137aa02a8da46a245284fe0f8e36,
         type: 3}
@@ -96,11 +101,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3099958670529051075, guid: 9151137aa02a8da46a245284fe0f8e36,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.519
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9151137aa02a8da46a245284fe0f8e36, type: 3}
